@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-from typing import List
+"""Pascal triangle implementation"""
 
-
-def pascal_triangle(n: int) -> List[list]:
-    '''
+def pascal_triangle(n: int) -> list[list]:
+    """
     Pascal triangle
-    '''
+    """
     if n <= 0:
         return []
 
