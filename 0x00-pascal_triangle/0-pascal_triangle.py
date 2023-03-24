@@ -20,9 +20,7 @@ def pascal_triangle(n: int) -> List[list]:
     for i in range(2, n):
         temp = [1, 1]
         for j in range(0, len(triangle[-1])-1):
-            a = triangle[-1][j]
-            b = triangle[-1][j+1]
-            temp.insert(-1, a + b)
+            temp.insert(-1, triangle[-1][j] + triangle[-1][j+1])
         triangle.append(temp)
 
     return triangle
