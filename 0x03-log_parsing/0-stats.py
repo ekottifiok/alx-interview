@@ -44,14 +44,16 @@ def main():
                 '405': 0, '500': 0
             }
             file_size = 0
-            for i in range(10):
+            for _ in range(10):
                 temp = stdin.readline()
-                if not fullmatch('{}\\-{}{}{}{}\\s*'.format(fp[0], fp[1], fp[2], fp[3], fp[4]), temp):
+                if not fullmatch('{}\\-{}{}{}{}\\s*'.format(
+                        fp[0],
+                        fp[1], fp[2], fp[3], fp[4]), temp):
                     continue
                 file_size += int(temp.split()[8])
                 status_appearance[temp.split()[7]] += 1
             print('File size:', file_size)
-            print(*("{}: {}".format(key, value) \
+            print(*("{}: {}".format(key, value)
                     for key, value in status_appearance.items()), sep='\n')
     except (KeyboardInterrupt, EOFError):
         return
