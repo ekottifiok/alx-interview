@@ -28,7 +28,7 @@ def main():
     from sys import stdin
     from re import fullmatch
 
-    pattern = (
+    fp = (
         r'\s*(?P<ip>\S+)\s*',
         r'\s*\[(?P<date>\d+\-\d+\-\d+ \d+:\d+:\d+\.\d+)\]',
         r'\s*"(?P<request>[^"]*)"\s*',
@@ -46,7 +46,7 @@ def main():
             file_size = 0
             for i in range(10):
                 temp = stdin.readline()
-                if not fullmatch(pattern, temp):
+                if not fullmatch('{}\\-{}{}{}{}\\s*'.format(fp[0], fp[1], fp[2], fp[3], fp[4]), temp):
                     continue
                 file_size += int(temp.split()[8])
                 status_appearance[temp.split()[7]] += 1
