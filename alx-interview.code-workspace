@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "0x01-lockboxes"
+		},
+		{
+			"path": "0x02-minimum_operations"
+		},
+		{
+			"path": "0x03-log_parsing"
 		}
 	],
 	"settings": {}
