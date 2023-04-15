@@ -2,8 +2,9 @@
 """
 Pascal triangle implementation
 """
+from typing import List
 
-def pascal_triangle(n: int) -> list[list]:
+def pascal_triangle(n: int) -> List[list]:
     '''
     Pascal triangle
     '''
