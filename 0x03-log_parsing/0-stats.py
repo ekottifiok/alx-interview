@@ -37,8 +37,8 @@ def extract_input(input_line: str) -> Dict[str, int]:
 
 
 def print_statistics(
-    total_file_size: int,
-    status_codes_stats: Dict[str, int]) -> None:
+        total_file_size: int,
+        status_codes_stats: Dict[str, int]) -> None:
     """Prints the accumulated statistics of the HTTP request log.
 
     Args:
@@ -53,17 +53,19 @@ def print_statistics(
 
 
 def update_metrics(
-    line: str,
-    total_file_size: int,
-    status_codes_stats: Dict[str, int]) -> int:
-    '''Updates the metrics from a given HTTP request log.
+        line: str,
+        total_file_size: int,
+        status_codes_stats: Dict[str, int]) -> int:
+    """Updates the metrics from a given HTTP request log.
 
     Args:
         line (str): The line of input from which to retrieve the metrics.
+        total_file_size (int): _description_
+        status_codes_stats (Dict[str, int]): _description_
 
     Returns:
         int: The new total file size.
-    '''
+    """
     line_info = extract_input(line)
     status_code = line_info.get('status_code', '0')
     if status_code in status_codes_stats.keys():
@@ -72,19 +74,13 @@ def update_metrics(
 
 
 def run() -> None:
-    '''Starts the log parser.
-    '''
+    """Starts the log parser.
+    """
     line_num = 0
     total_file_size = 0
     status_codes_stats = {
-        '200': 0,
-        '301': 0,
-        '400': 0,
-        '401': 0,
-        '403': 0,
-        '404': 0,
-        '405': 0,
-        '500': 0,
+        '200': 0, '301': 0, '400': 0, '401': 0,
+        '403': 0, '404': 0, '405': 0, '500': 0,
     }
     try:
         while True:
