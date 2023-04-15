@@ -19,7 +19,7 @@ def pascal_triangle(n: int):
 
     triangle = [[1], [1, 1]]
 
-    for i in range(2, n):
+    for _ in range(2, n):
         temp = [1, 1]
         for j in range(0, len(triangle[-1])-1):
             a = triangle[-1][j]
