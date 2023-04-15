@@ -2,12 +2,12 @@
 """
 Pascal triangle implementation
 """
-from typing import List
 
-def pascal_triangle(n: int) -> List[list]:
-    '''
+
+def pascal_triangle(n: int):
+    """
     Pascal triangle
-    '''
+    """
     if n <= 0:
         return []
 
