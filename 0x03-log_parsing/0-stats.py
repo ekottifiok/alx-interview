@@ -27,6 +27,8 @@ normal to not have the same output as this one.
 
 
 def main():
+    """the main working of the parsing
+    """
     from sys import stdin
     from re import fullmatch
 
