@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "0x03-log_parsing"
+		},
+		{
+			"path": "0x04-utf8_validation"
 		}
 	],
 	"settings": {}

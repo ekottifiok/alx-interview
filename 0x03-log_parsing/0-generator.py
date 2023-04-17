@@ -13,4 +13,3 @@ for i in range(3):
         random.randint(1, 1024)
     ))
     sys.stdout.flush()
-    

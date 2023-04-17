@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''A script for parsing HTTP request logs.
-'''
+"""A script for parsing HTTP request logs."""
 from re import fullmatch
 from typing import Dict, List
 
