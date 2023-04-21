@@ -2,7 +2,7 @@
 """UTF-8 Validation"""
 
 
-def validUTF8(data) -> bool:
+def validUTF8(data):
     """
     Check that a sequence of byte values follows the UTF-8 encoding
     rules.  Does not check for canonicalization
@@ -13,7 +13,7 @@ def validUTF8(data) -> bool:
         return False
 
     for n in data:
-        if not isinstance(n, int) or len(f'{n:0>{7}b}') != 7:
+        if not isinstance(n, int) or n > 0x7f or n < 0:
             return False
 
     return True
