@@ -2,8 +2,6 @@
 """UTF-8 Validation"""
 from typing import List
 
-LENONEBYTE = 7
-
 
 def validUTF8(data: List[int]) -> bool:
     """
@@ -16,7 +14,7 @@ def validUTF8(data: List[int]) -> bool:
         return False
 
     for n in data:
-        if len(f'{n:0>{LENONEBYTE}b}') != LENONEBYTE:
+        if not isinstance(n, int) or len(f'{n:0>{7}b}') != 7:
             return False
 
     return True
