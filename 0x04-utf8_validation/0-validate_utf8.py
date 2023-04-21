@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """UTF-8 Validation"""
-from typing import List
 
 
-def validUTF8(data: List[int]) -> bool:
+def validUTF8(data) -> bool:
     """
     Check that a sequence of byte values follows the UTF-8 encoding
     rules.  Does not check for canonicalization
     (i.e. overlong encodings
     are acceptable).
     """
-    if not data or not isinstance(data, List):
+    if not data or not isinstance(data, list):
         return False
 
     for n in data:
