@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""A script for parsing HTTP request logs."""
+"""
+A script for parsing HTTP request logs.
+and it's an interview
+"""
 from re import fullmatch
-from typing import Dict, List
+from typing import Dict
 
 
 def extract_input(input_line: str) -> Dict[str, int]:
