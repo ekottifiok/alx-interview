@@ -1,4 +1,5 @@
-#!/usr/bin/env py
+#!/usr/bin/python3
+"""nqueens module for solving it"""
 from sys import argv
 
 
