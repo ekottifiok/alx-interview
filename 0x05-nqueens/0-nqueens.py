@@ -1,6 +1,7 @@
 #!/usr/bin/env py
 from sys import argv
 
+
 def solveNQueens(size: int):
     """solves the nqueens problem
 
@@ -9,7 +10,7 @@ def solveNQueens(size: int):
 
     Returns:
         List[List[int]]: _description_
-    """    
+    """
     column_set = set()
     posDiag = set()
     negDiag = set()
@@ -21,7 +22,7 @@ def solveNQueens(size: int):
 
         Args:
             row (_type_): _description_
-        """        
+        """
         if row == size:
             results.append(
                 [[idx, row.index(1)] for idx, row in enumerate(board)]
