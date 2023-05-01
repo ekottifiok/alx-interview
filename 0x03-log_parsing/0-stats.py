@@ -1,5 +1,7 @@
-#!/usr/bin/env py
-"""A script for parsing HTTP request logs.
+#!/usr/bin/python3
+"""
+A script for parsing HTTP request logs.
+and it's an interview
 """
 from re import fullmatch
 from typing import Dict
