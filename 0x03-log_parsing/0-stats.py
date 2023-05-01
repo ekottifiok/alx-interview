@@ -71,7 +71,8 @@ def update_metrics(
 
 
 def run() -> None:
-    """Starts the log parser.
+    """Starts the log parser. makes the everything to run
+    Its the main function in the module
     """
     line_num = 0
     total_file_size = 0
