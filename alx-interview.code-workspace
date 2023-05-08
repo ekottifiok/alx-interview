@@ -17,6 +17,12 @@
 		},
 		{
 			"path": "0x05-nqueens"
+		},
+		{
+			"path": "0x06-starwars_api"
+		},
+		{
+			"path": "0x07-rotate_2d_matrix"
 		}
 	],
 	"settings": {}
