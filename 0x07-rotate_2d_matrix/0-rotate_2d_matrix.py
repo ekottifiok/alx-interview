@@ -11,9 +11,6 @@ def rotate_2d_matrix(matrix):
     dec = [i for i in range(size - 1, -1, -1)]
     matrix_copy = deepcopy(matrix)
 
-    for i in range(3):
+    for i in range(size):
         for j, k in zip(inc, dec):
-            print([j, i], [i, k])
             matrix[i][k] = matrix_copy[j][i]
-
-    print(matrix_copy)
