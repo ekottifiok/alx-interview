@@ -2,7 +2,7 @@
 """rotates a matrix"""
 
 
-def rotate_2d_matrix(matrix = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]):
+def rotate_2d_matrix(matrix):
     """rotates a 2d matrix by 90 degrees clockwise
     """
     size = len(matrix)
@@ -15,9 +15,6 @@ def rotate_2d_matrix(matrix = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]):
             temp.append(j)
         matrix_copy.append(temp)
 
-
     for i in range(size):
         for j, k in zip(inc, dec):
             matrix[i][k] = matrix_copy[j][i]
-
-rotate_2d_matrix()
