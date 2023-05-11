@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """rotates a matrix"""
-from copy import deepcopy
 
 
 def rotate_2d_matrix(matrix):
@@ -9,7 +8,7 @@ def rotate_2d_matrix(matrix):
     size = len(matrix)
     inc = [i for i in range(size)]
     dec = [i for i in range(size - 1, -1, -1)]
-    matrix_copy = deepcopy(matrix)
+    matrix_copy = matrix.copy()
 
     for i in range(size):
         for j, k in zip(inc, dec):
