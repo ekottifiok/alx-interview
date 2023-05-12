@@ -9,7 +9,7 @@ if __name__ == "__main__":
         '401': 0, '403': 0, '404': 0,
         '405': 0, '500': 0
     }
-    file_size, iter = 0, 0
+    file_size = 0
 
     def print_statistics() -> None:
         """Prints the accumulated statistics of the HTTP request log.
@@ -27,16 +27,16 @@ if __name__ == "__main__":
     try:
         while True:
 
-            temp = input().split()
+            temp = input().split(sep=" ")
+            if len(temp) > 6:
+                try:
+                    file_size += int(temp[-1])
+                    status_appearance[temp[-2]] += 1
+                except KeyError:
+                    continue
 
-            if len(temp) != 9:
-                continue
-
-            file_size += int(temp[8])
-            status_appearance[temp[7]] += 1
-            iter += 1
-            if iter % 10 == 0:
-                print_statistics()
+                if sum(status_appearance.values()) % 10 == 0:
+                    print_statistics()
 
     except (KeyboardInterrupt, EOFError):
         print_statistics()
