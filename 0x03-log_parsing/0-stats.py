@@ -19,10 +19,11 @@ if __name__ == "__main__":
             status_codes_stats (Dict[int, int]): _description_
         """
         print('File size: {:d}'.format(file_size), flush=True)
-        print(*("{}: {}".format(key, value)
-                for key, value in status_appearance.items() if value > 0),
-              sep='\n', flush=True
-              )
+        for key, value in sorted(
+                status_appearance.items(),
+                key=lambda x: x[1], reverse=True):
+            if value > 0:
+                print(*("{}: {}".format(key, value)), sep='', flush=True)
 
     try:
         while True:
