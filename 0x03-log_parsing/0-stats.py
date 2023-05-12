@@ -26,6 +26,7 @@ if __name__ == "__main__":
               sep='\n', flush=True
               )
 
+
     try:
         while True:
 
@@ -39,5 +40,8 @@ if __name__ == "__main__":
             iter += 1
             if iter % 10 == 0:
                 print_statistics()
+                file_size, iter = 0, 0
+                status_appearance = {k:0 for k in status_appearance.keys()}
+
     except (KeyboardInterrupt, EOFError):
         print_statistics()
