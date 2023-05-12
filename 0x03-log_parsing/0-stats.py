@@ -20,7 +20,7 @@ if __name__ == "__main__":
         """
         print('File size: {:d}'.format(file_size), flush=True)
         print(*("{}: {}".format(key, value)
-                for key, value in status_appearance.items()),
+                for key, value in status_appearance.items() if value > 0),
               sep='\n', flush=True
               )
 
