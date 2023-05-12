@@ -38,9 +38,5 @@ if __name__ == "__main__":
             if iter % 10 == 0:
                 print_statistics()
 
-                # resets the variables
-                file_size, iter = 0, 0
-                status_appearance = {k: 0 for k in status_appearance.keys()}
-
     except (KeyboardInterrupt, EOFError):
         print_statistics()
