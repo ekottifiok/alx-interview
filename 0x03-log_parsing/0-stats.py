@@ -4,8 +4,6 @@
 
 
 if __name__ == "__main__":
-    from typing import Dict
-
     status_appearance = {
         '200': 0, '301': 0, '400': 0,
         '401': 0, '403': 0, '404': 0,
@@ -26,7 +24,6 @@ if __name__ == "__main__":
               sep='\n', flush=True
               )
 
-
     try:
         while True:
 
@@ -40,8 +37,10 @@ if __name__ == "__main__":
             iter += 1
             if iter % 10 == 0:
                 print_statistics()
+
+                # resets the variables
                 file_size, iter = 0, 0
-                status_appearance = {k:0 for k in status_appearance.keys()}
+                status_appearance = {k: 0 for k in status_appearance.keys()}
 
     except (KeyboardInterrupt, EOFError):
         print_statistics()
