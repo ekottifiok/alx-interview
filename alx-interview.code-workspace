@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "0x07-rotate_2d_matrix"
+		},
+		{
+			"path": "0x08-making_change"
 		}
 	],
 	"settings": {}
