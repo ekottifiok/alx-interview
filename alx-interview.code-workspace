@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "0x08-making_change"
+		},
+		{
+			"path": "0x09-island_perimeter"
 		}
 	],
 	"settings": {}
