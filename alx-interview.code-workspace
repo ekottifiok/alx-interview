@@ -29,6 +29,9 @@
 		},
 		{
 			"path": "0x09-island_perimeter"
+		},
+		{
+			"path": "0x0A-primegame"
 		}
 	],
 	"settings": {}
