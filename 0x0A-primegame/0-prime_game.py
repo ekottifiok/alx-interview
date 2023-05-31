@@ -13,6 +13,8 @@ def isWinner(x, nums):
     Returns:
         Ben or Maria: _description_
     """
+    if x < 1 or not nums:
+        return None
     max_n = max(nums)
     primes = []
 
