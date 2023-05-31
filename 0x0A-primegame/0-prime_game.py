@@ -1,7 +1,21 @@
+#!/usr/bin/python3
+"""Prime Game Module
+"""
+
 
 def isWinner(x, nums):
+    """the main function isWinner to compute
+
+    Args:
+        x (int): _description_
+        nums (list[int]): _description_
+
+    Returns:
+        Ben or Maria: _description_
+    """
     max_n = max(nums)
     primes = []
+
     def calculate_primes():
         """We can precalculate the primes up to the maximum 'n'
         that can occur in any round. This will help us
@@ -25,8 +39,6 @@ def isWinner(x, nums):
         for i in range(2, max_n + 1):
             if is_prime[i]:
                 primes.append(i)
-
-
 
     calculate_primes()
     winners = []
